@@ -1,10 +1,12 @@
 <?php
-$naslov = "Najbolji PHP dokument na internetu";
+$naslov = "Najbolji PHP dokument na internetu - nastavak";
 $autor = "Tomislav Delač";
+$opis = "Ova stranica je još bolja od prošle i služi za uvježbavanje varijabli, ispisa i osnovnog CSS-a.";
 $link_href = "https://theuselessweb.com/";
 $link_text = "Posjeti beskorisnu stranicu";
+$linkInfo    = "https://www.php.net";
+$linkNatrag  = "vjezba2.1.php";
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +14,7 @@ $link_text = "Posjeti beskorisnu stranicu";
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?php echo htmlspecialchars($naslov); ?></title>
   
+
   <style>
 
     :root{
@@ -84,11 +87,14 @@ $link_text = "Posjeti beskorisnu stranicu";
   <main class="wrap">
     <h1><?php echo htmlspecialchars($naslov); ?></h1>
     <p>Ovu stranicu izradio/la je <strong><?php echo htmlspecialchars($autor); ?></strong>.</p>
-    <p>PHP je serverski jezik koji generira HTML ili JSON odgovor prema klijentu.</p>
-    <p>
-      <a class="btn" href="<?php echo htmlspecialchars($link_href); ?>" target="_blank" rel="noopener"><?php echo htmlspecialchars($link_text); ?></a>
-    </p>
+    <p><?php echo $opis; ?></p>
+    <div class="row">
+      <a class="btn" href="<?php echo $linkInfo; ?>" target="_blank">Saznaj više o PHP-u</a>
+      <a class="btn" href="<?php echo $linkNatrag; ?>">Natrag na vježba 1b</a>
+    </div>
+   
     <footer>&copy; <?php echo date('Y'); ?> — Demo za PHP</footer>
   </main>
 </body>
 </html>
+<!-- Naziv datoteke: vjezba2.2.php -->
